@@ -42,6 +42,7 @@ tickets=Ticket.all
 films=Film.all
 customers=Customer.all
 
+ticket_sum=Ticket.sum
 
 binding.pry
 nil

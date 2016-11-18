@@ -58,8 +58,14 @@ class Ticket
       return film
   end
 
-  def sum()
-    
+  def self.sum()
+    sql="SELECT c.* AS customer,
+    t.* as ticket_details
+    FROM customers c
+    INNER JOIN tickets t
+    ON c.id = t.customer_id;"
+    result = self.get_many(sql)
+    return result
   end
 
   private
